@@ -45,6 +45,16 @@ func TestClient_Do(t *testing.T) {
 		assert.Error(t, err)
 	})
 
+	t.Run("It should return an error on invalid post", func(t *testing.T) {
+		badSdk := client{
+			baseUrl:   ":wrong:",
+			apiKey:    "key",
+			apiSecret: "secret",
+		}
+		_, err := badSdk.Do(newRequest("WRONG", "::"))
+		assert.Error(t, err)
+	})
+
 	t.Run("It should send post form parameters", func(t *testing.T) {
 		stringParam := "test1"
 		floatParam := 64.5
@@ -73,4 +83,8 @@ func TestClient_Do(t *testing.T) {
 func TestNew(t *testing.T) {
 	sdk := New("api-key", "api-secret")
 	assert.Implements(t, (*Client)(nil), sdk.client)
+}
+
+func invalidJson() []byte {
+	return []byte(`<h1>Not available</h1>`)
 }

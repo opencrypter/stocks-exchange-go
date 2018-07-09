@@ -1,11 +1,11 @@
 package stocks_exchange
 
 import (
-	"strconv"
-	"net/url"
-	"net/http"
-	"io/ioutil"
 	"errors"
+	"io/ioutil"
+	"net/http"
+	"net/url"
+	"strconv"
 	"strings"
 )
 
@@ -59,7 +59,10 @@ func (r *request) Int64Param(key string, value *int64) *request {
 }
 
 func (c *client) Do(request *request) ([]byte, error) {
-	r, _ := c.createRequest(request)
+	r, err := c.createRequest(request)
+	if err != nil {
+		return nil, err
+	}
 
 	client := http.Client{}
 	response, err := client.Do(r)
