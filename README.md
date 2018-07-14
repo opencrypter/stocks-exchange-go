@@ -75,7 +75,23 @@ func main() {
     stocksExchange := stocks_exchange.New("Your-api-key", "Your secret api-key")
     
     query := stocks_exchange.NewGetMarketSummaryQuery("BSM", "BTC")
-    markets , err := stocksExchange.GetMarketSummary(query)
+    marketSummary , err := stocksExchange.GetMarketSummary(query)
+}
+```
+
+### Tickers
+Use it to get the recommended retail exchange rates for all currency pairs.
+
+#### Example
+
+```go
+package main
+
+import "github.com/opencrypter/stocks-exchange-go"
+
+func main() {
+    stocksExchange := stocks_exchange.New("Your-api-key", "Your secret api-key")
+    tickers , err := stocksExchange.GetTickers()
 }
 ```
 
