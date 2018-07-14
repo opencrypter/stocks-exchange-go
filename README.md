@@ -1,7 +1,7 @@
 # Stocks.Exchange . Go Sdk/Wrapper
 [![Build Status](https://travis-ci.org/opencrypter/stocks-exchange-go.svg?branch=master)](https://travis-ci.org/opencrypter/stocks-exchange-go)
 [![codecov](https://codecov.io/gh/opencrypter/stocks-exchange-go/branch/master/graph/badge.svg)](https://codecov.io/gh/opencrypter/stocks-exchange-go)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Join the chat at https://gitter.im/stocks-exchange-go/Lobby](https://badges.gitter.im/stocks-exchange-go/Lobby.svg)](https://gitter.im/stocks-exchange-go/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 An open source sdk for [Stocks.exchange](https://www.stocks.exchange/ge) written in Golang.
 
