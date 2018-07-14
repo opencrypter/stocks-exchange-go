@@ -44,6 +44,22 @@ func main() {
 }
 ```
 
+### Markets
+Get all available currency pairs with additional info.
+
+#### Example
+
+```go
+package main
+
+import "github.com/opencrypter/stocks-exchange-go"
+
+func main() {
+    stocksExchange := stocks_exchange.New("Your-api-key", "Your secret api-key")
+    markets , err := stocksExchange.GetMarkets()
+}
+```
+
 ## Tests
 All is covered 100%. You can run all tests as normally you do it:
 ```
