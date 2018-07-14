@@ -95,6 +95,22 @@ func main() {
 }
 ```
 
+### Prices
+Use it to get the new retail exchange rates for all currency pairs.
+
+#### Example
+
+```go
+package main
+
+import "github.com/opencrypter/stocks-exchange-go"
+
+func main() {
+    stocksExchange := stocks_exchange.New("Your-api-key", "Your secret api-key")
+    prices, err := stocksExchange.GetPrices()
+}
+```
+
 ## Tests
 All is covered 100%. You can run all tests as normally you do it:
 ```
