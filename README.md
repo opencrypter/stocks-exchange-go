@@ -60,6 +60,24 @@ func main() {
 }
 ```
 
+### Market summary
+Get currency pair with additional info.
+
+#### Example
+
+```go
+package main
+
+import "github.com/opencrypter/stocks-exchange-go"
+
+func main() {
+    stocksExchange := stocks_exchange.New("Your-api-key", "Your secret api-key")
+    
+    query := stocks_exchange.NewGetMarketSummaryQuery("BSM", "BTC")
+    markets , err := stocksExchange.GetMarketSummary(query)
+}
+```
+
 ## Tests
 All is covered 100%. You can run all tests as normally you do it:
 ```
